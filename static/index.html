@@ -11,12 +11,12 @@
 <style>
 
     :root{
-        --color-principal : rgb(20, 250, 200);
+        --color-principal : rgb(208, 250, 20);
+        --color-secundario: rgb(2, 41, 51);
     }
 
     body{
         min-height: 100dvh;
-        min-width: 100dvw;
         margin: 0;
 
         display: flex;
@@ -24,26 +24,51 @@
         justify-content: center;
         align-items: center;
 
-        text-align: center;
         font-family: 'Lexend Deca', san-serif;
 
-        background-color: rgb(2, 41, 51);
+        background-color: var(--color-secundario);
         color: white
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    main h1{
+        margin: 0;
     }
     
     h1{
-
         color: var(--color-principal);
+        font-size: 2em;
     }
     
     a{
         color: var(--color-principal);
         text-decoration: none;
+        font-1rem: 1em;
     }
 
+    p{
+        font-size: 1em;
+    }
+
+    @media (max-width: 768px) {
+
+        main{
+            font-size: 0.6rem;
+        }
+    }
+        
 </style>
 <body>
-    <h1>Bienvenido a mi página principal</h1>
-    <p>Ten acceso a mi otra página con proyectos para visitar: <a href="https://osotripolar.github.io/osotripolar/">Visitar Sitio</a></p>
+    <main>
+        <h1>Bienvenido a mi página principal</h1>
+        <p>Ten acceso a mi otra página con proyectos para visitar</p>
+        <a href="https://osotripolar.github.io/osotripolar/">Visitar Sitio</a>
+    </main>
 </body>
 </html>
