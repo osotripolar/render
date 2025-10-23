@@ -5,8 +5,6 @@ import { iniciarSaludos} from './wakeServer.js';
 // Inicia la app
 const app = express()
 
-iniciarSaludos()
-
 app.use('/',(req,res)=>{
     res.sendFile('./static/index.html', {
         root: __dirname
