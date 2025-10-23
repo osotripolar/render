@@ -1,9 +1,16 @@
 import express from 'express'
+import { __dirname } from "./roots.js";
+import { iniciarSaludos} from './wakeServer.js';
 
+// Inicia la app
 const app = express()
 
-app.get('/',(req,res)=>{
-    res.send('Hello mdfk')
+iniciarSaludos()
+
+app.use('/',(req,res)=>{
+    res.sendFile('./static/index.html', {
+        root: __dirname
+    })
 })
 
 app.listen(3000)
