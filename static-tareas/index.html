@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de listas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container container__header">
+            <h1><a href="">Oso Tripolar</a></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container container__main">
+            
+            <h2>Lista de Listas</h2>
+            
+            <p>Acá enlistaremos las listas y le daremos link cuando estén en producción</p>
+            
+            <form class="form">
+                <div class="form__field">
+                    <label for="name">Escriba el nombre de la listas:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form__field">
+                    <label for="description">Agregue una descripción:</label>
+                    <input type="text" name="description" id="description" required>
+                </div>
+                <button id="button-add">Añadir</button>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <!-- <th>Acá deberían ir los botones para poder ediar el mensaje además de borrarlo</th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Acá va el contenido en templates -->
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container container__footer">
+            <a href="/">Ir al Inicio</a>
+        </div>
+    </footer>
+
+
+    
+    <template>
+        <tr data-id="">
+            <td class="name">tabla de prioridades</td>
+            <td class="description">Hacer una tabla bla de prioridades y organizarla</td>
+            <!-- <td class="link"><a href="" target="_blank">Link</a></td> -->
+        </tr>
+    </template>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

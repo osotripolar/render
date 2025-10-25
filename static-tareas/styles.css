@@ -1,0 +1,110 @@
+/* En este documento se realizará una plantilla para que las páginas web tengan un estilo inicial,
+si una página requiere estilos más personalizados pues colocarlo en otro lado*/
+
+/* Se trabajara con el concepto Mobile First, por ende sus @screen tendrán la info del sitio de escritorio */
+
+:root{
+    --primary-color : rgb(208, 250, 20);
+    --secundary-color: rgb(2, 41, 51);
+    --color-blanco: rgb(255, 255, 255);
+
+    --primary-color__light: hsl(from var(--primary-color) h s calc(l + 40))
+}
+
+/* ESTILOS GENERALES --------------------------------------*/
+
+body{
+    min-height: 100dvh;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    /* Previamente hay que llamar la fuente desde el html */
+    font-family: 'Lexend Deca', san-serif;
+
+    background-color: var(--secundary-color);
+    color: var(--color-blanco);
+}
+
+h1,h2,h3{
+    color: var(--primary-color);
+}
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+button{
+    width: fit-content;
+
+    font-family: 'Lexend Deca', san-serif;
+    font-weight: 600;
+    color: var(--secundary-color);
+
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5em;
+    
+    cursor: pointer;
+}
+
+input, textarea, select{
+    font-family: 'Lexend Deca', san-serif;
+}
+
+/* ESTILOS X BLOQUE -------------------------------------- */
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+.container__main{
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header{
+    border-bottom: 2px solid var(--primary-color);
+    text-align: center;
+}
+
+/* MAIN */
+main{
+    flex: 1;
+    display: flex;
+}
+
+/* FOOTER */
+footer{
+    border-top: 2px solid var(--primary-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* OTROS ESTILOS --------------------------------------*/
+
+/* TABLE*/
+
+
+thead{
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    text-align: left;
+}
+
+tbody{
+    background-color: white;
+    color: var(--secundary-color);
+}
+
+tbody tr:nth-child(even){
+    background-color: var(--primary-color__light);
+}
+
+th,td{
+    padding: 0.5em;
+}

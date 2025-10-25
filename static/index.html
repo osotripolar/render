@@ -15,60 +15,109 @@
         --color-secundario: rgb(2, 41, 51);
     }
 
+/* ESTILOS VARIOS */
+
+    h1{
+        color: var(--color-principal);
+        font-size: 2em;
+    }
+
+/* ESTILOR POR BLOQUE */
+
     body{
         min-height: 100dvh;
+        width: 100vw;
         margin: 0;
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
 
         font-family: 'Lexend Deca', san-serif;
 
         background-color: var(--color-secundario);
-        color: white
+        color: white;
     }
+
+    a{
+        color: var(--color-principal);
+        text-decoration: none;
+    }
+
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header{
+        border-bottom: 2px solid var(--color-principal);
+        text-align: center;
+    }
+
+    /* MAIN */
 
     main{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         font-size: 1.5rem;
         text-align: center;
+        flex: 1 /* importante para que ocupe el resto de la pantalla */
     }
 
     main h1{
         margin: 0;
     }
     
-    h1{
-        color: var(--color-principal);
-        font-size: 2em;
-    }
     
-    a{
-        color: var(--color-principal);
-        text-decoration: none;
+    main a{
         font-1rem: 1em;
     }
 
-    p{
+    main p{
         font-size: 1em;
     }
+
+    /* FOOTER */
+
+    footer{
+        border-top: 2px solid var(--color-principal);
+        padding: 30px;
+        text-align: center;
+    }
+
+
 
     @media (max-width: 768px) {
 
         main{
-            font-size: 0.6rem;
+            font-size: 0.8rem;
         }
     }
         
 </style>
 <body>
+    <header>
+        <div class="container container__header">
+            <h1><a href="">Oso Tripolar</a></h1>
+        </div>
+    </header>
     <main>
-        <h1>Bienvenido a mi página principal</h1>
-        <p>Ten acceso a mi otra página con proyectos para visitar</p>
-        <a href="https://osotripolar.github.io/osotripolar/">Visitar Sitio</a>
+        <div class="container container__main">
+            <h1>Bienvenido a mi página principal</h1>
+            <p>Ten acceso a mi otra página con proyectos para visitar</p>
+            <a href="https://osotripolar.github.io/osotripolar/">Visitar Sitio</a>
+        </div>
+
+        <h2>Tareas</h2>
+        <a href="/tareas">Ir a tareas</a>
     </main>
+    <footer>
+        <div class="container container__footer">
+            <a href="/">Ir al Inicio</a>
+        </div>
+    </footer>
 </body>
 </html>

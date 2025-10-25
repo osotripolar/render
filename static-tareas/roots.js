@@ -1,0 +1,4 @@
+const APIKEY_SUPABASE = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFlaWl1cHd2d2ppYXJleGptc2pzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1MjQ4MTIsImV4cCI6MjA3MDEwMDgxMn0.zoW4WPlQRdry8Qkjvhc3C9I24KTCBbs8cuK0e-e1ZZo'
+const URL_SUPABASE_TABLE = 'https://aeiiupwvwjiarexjmsjs.supabase.co/rest/v1/'
+
+export {APIKEY_SUPABASE, URL_SUPABASE_TABLE}
