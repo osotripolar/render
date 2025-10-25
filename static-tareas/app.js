@@ -43,18 +43,15 @@ const postData = async()=>{
 
 btnAdd.addEventListener('click', async ()=>{
 
-    // si no cumple con los campos va al else
-    if(inputDesc.value == '' || inputName.value == ''){
-        window.alert('Debes llenar ambos campos')
-    }
-    else{
+    // Cuando no se cumplan los campos llenos el mismo form recalcará que deben llenar los campos
+    if(!(inputDesc.value == '' || inputName.value == '')){
         await postData()
         // limpiamos los campos
+        inputName.focus()
         inputDesc.value = '' ;
         inputName.value = '';
         tbody.textContent=''
         mostrarDatos()
-
     }
     
 })
