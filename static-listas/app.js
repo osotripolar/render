@@ -1,4 +1,4 @@
-import {APIKEY_SUPABASE, URL_SUPABASE_TABLE } from "/tareas/roots.js";
+import {APIKEY_SUPABASE, URL_SUPABASE_TABLE } from "/listas/roots.js";
 
 // ELEMENTOS HTML
 
@@ -47,7 +47,7 @@ btnAdd.addEventListener('click', async ()=>{
     if(!(inputDesc.value == '' || inputName.value == '')){
         await postData()
         // limpiamos los campos
-        inputName.focus()
+        inputName.focus()   
         inputDesc.value = '' ;
         inputName.value = '';
         tbody.textContent=''

@@ -1,18 +1,18 @@
 import express from 'express'
 import { __dirname } from "./roots.js";
-import { iniciarSaludos} from './wakeServer.js';
-
 
 // Inicia la app
 const app = express()
 
-app.get('/',(req,res)=>{
-    res.sendFile('./static/index.html', {
-        root: __dirname
-    })
-})
+// app.get('/',(req,res)=>{
+//     res.sendFile('./static/index.html', {
+//         root: __dirname
+//     })
+// })
 
-app.use('/tareas',express.static('static-tareas', {root: __dirname})) // así servimos toda la carpeta
+app.use('/',express.static('static',{root: __dirname}));
+
+app.use('/listas',express.static('static-listas', {root: __dirname})); // así servimos toda la carpeta
 
 // Ejecución
 app.listen(3000, '0.0.0.0' ,() =>{

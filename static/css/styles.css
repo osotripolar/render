@@ -1,0 +1,155 @@
+/* En este documento se realizará una plantilla para que las páginas web tengan un estilo inicial,
+si una página requiere estilos más personalizados pues colocarlo en otro lado*/
+
+/* Se trabajara con el concepto Mobile First, por ende sus @screen tendrán la info del sitio de escritorio */
+
+/* ROOTS ----------------------------------------------------- */
+
+:root{
+    --primary-color : rgb(208, 250, 20);
+    --secundary-color: rgb(2, 41, 51);
+    --color-blanco: rgb(255, 255, 255);
+
+    --primary-color__light: hsl(from var(--primary-color) h s calc(l + 40));
+    --primary-color__dark: hsl(from var(--primary-color) h s calc(l - 20));
+
+    --secundary-color__light: hsl(from var(--secundary-color) h s calc(l + 40));
+    --secundary-color__dark: hsl(from var(--secundary-color) h s calc(l - 3))
+}
+
+/* ESTILOS GENERALES ------------------------------------------*/
+
+body{
+    min-height: 100dvh;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: column;
+    
+    /* Previamente hay que llamar la fuente desde el html */
+    font-family: 'Lexend Deca', san-serif;
+    
+    background-color: var(--secundary-color);
+    color: var(--color-blanco);
+}
+
+h1,h2,h3{
+    color: var(--primary-color);
+}
+
+a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary-color__dark)
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+button{
+    width: fit-content;
+
+    font-family: 'Lexend Deca', san-serif;
+    font-weight: 600;
+    color: var(--secundary-color);
+
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.5em;
+    
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--primary-color__dark)
+}
+
+/* ESTILOS X BLOQUE ------------------------------------- */
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+header{
+    padding: 1em 0;
+    display: flex;
+    
+    border-bottom: 2px solid var(--primary-color);
+    
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    flex: 1 /* importante para que ocupe el resto de la pantalla */
+}
+main h1{
+    margin: 0;
+}
+
+
+main a{
+    font-size: 1em;
+}
+main p{
+    font-size: 1em;
+}
+/* FOOTER */
+footer{
+    border-top: 2px solid var(--primary-color);
+    padding: 30px;
+    text-align: center;
+}
+.hidden-content{
+    display: none;
+}
+
+
+
+
+
+
+
+/* SOLUCIONAR ESTO */ 
+/* Se supone que esto no entra dentro de las categorías generaless */
+
+.saludo{
+    padding: 2em 0;
+}
+
+.extra{
+    background-color: var(--secundary-color__dark);
+    padding: 1em;
+}
+
+.extra h2{
+    color: var(--color-blanco);
+}
+
+
+/* MEDIA ---------------------------- */
+
+
+@media (max-width: 768px) {
+    main{
+        font-size: 0.8rem;
+    }
+}

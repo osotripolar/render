@@ -1,123 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%=  %>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OsoTripolar - Inicio</title>
+    <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<style>
-
-    :root{
-        --color-principal : rgb(208, 250, 20);
-        --color-secundario: rgb(2, 41, 51);
-    }
-
-/* ESTILOS VARIOS */
-
-    h1{
-        color: var(--color-principal);
-        font-size: 2em;
-    }
-
-/* ESTILOR POR BLOQUE */
-
-    body{
-        min-height: 100dvh;
-        width: 100vw;
-        margin: 0;
-
-        display: flex;
-        flex-direction: column;
-
-        font-family: 'Lexend Deca', san-serif;
-
-        background-color: var(--color-secundario);
-        color: white;
-    }
-
-    a{
-        color: var(--color-principal);
-        text-decoration: none;
-    }
-
-    .container{
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* HEADER */
-
-    header{
-        border-bottom: 2px solid var(--color-principal);
-        text-align: center;
-    }
-
-    /* MAIN */
-
-    main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        text-align: center;
-        flex: 1 /* importante para que ocupe el resto de la pantalla */
-    }
-
-    main h1{
-        margin: 0;
-    }
-    
-    
-    main a{
-        font-1rem: 1em;
-    }
-
-    main p{
-        font-size: 1em;
-    }
-
-    /* FOOTER */
-
-    footer{
-        border-top: 2px solid var(--color-principal);
-        padding: 30px;
-        text-align: center;
-    }
-
-
-
-    @media (max-width: 768px) {
-
-        main{
-            font-size: 0.8rem;
-        }
-    }
-        
-</style>
 <body>
+
     <header>
         <div class="container container__header">
-            <h1><a href="">Oso Tripolar</a></h1>
+            <a href="/"><h1>Oso Tripolar</h1></a>
+            <nav>
+                <ul>
+                    <li>Enlace 1</li>
+                    <li>Enlace 2</li>
+                    <li>Enlace 3</li>
+                </ul>
+            </nav>
+            <button id="btn-register">Log In</button>
         </div>
     </header>
+
     <main>
         <div class="container container__main">
-            <h1>Bienvenido a mi página principal</h1>
-            <p>Ten acceso a mi otra página con proyectos para visitar</p>
-            <a href="https://osotripolar.github.io/osotripolar/">Visitar Sitio</a>
-        </div>
 
-        <h2>Tareas</h2>
-        <a href="/tareas">Ir a tareas</a>
+            <div class="saludo">
+                <h1>Bienvenido a mi página Web</h1>
+                <p>De momento, ten acceso a mi otra página web con proyectos para visitar</p>
+                <a href="https://osotripolar.github.io/osotripolar/">Visitar Sitio</a>
+            </div>
+
+            
+            <div class="extra hidden-content">
+                <h1>Proyectos de uso personal</h1>
+                <h2>Tareas</h2>
+                <a href="/listas">Visitar sitio</a>
+            </div>
+            
+        </div>
     </main>
+
     <footer>
         <div class="container container__footer">
             <a href="/">Ir al Inicio</a>
         </div>
     </footer>
+
+    <script src="/js/app.js"></script>
 </body>
 </html>
